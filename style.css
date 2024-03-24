@@ -1,142 +1,237 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: "Roboto", sans-serif;
-    font-size: 14px;
-    transition: all 0.3s ease;
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  transition: all 0.3s ease;
 }
-.section{
-    margin-bottom: 40px;
+.section {
+  margin-bottom: 40px;
 }
-.container{
-    max-width: 1400px;
-    margin: 0 auto;
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
 }
-ul{
-    list-style: none;
+ul {
+  list-style: none;
 }
-p{
-    color: gray;
+p {
+  color: gray;
 }
-.header__top{
-    background-color: black;
-    color: white;
+.header__top {
+  background-color: black;
+  color: white;
 }
-.header__container > ul{
-    display: flex;
-    align-items: center;
-    padding: 10px 0;
-    gap: 20px;
-    justify-content: end;
+.header__container > ul {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  gap: 20px;
+  justify-content: end;
 }
 
-.gr{
-    display: flex;
-    align-items: center;
-    background-color: white;
-    color: black;
-    padding: 4px;
-    border-radius: 4px;
+.gr {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  color: black;
+  padding: 4px;
+  border-radius: 4px;
 }
-.gr>input{
-    outline: none;
-    border: none;
+.gr > input {
+  outline: none;
+  border: none;
 }
 .navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
 }
-.logo > a > img{
-    width: 200px;
+.logo > a > img {
+  width: 200px;
 }
-.navbar > ul{
-    display: flex;
-    align-items: end;
-    gap: 20px;
-    font-weight: bold;
+.navbar > ul {
+  display: flex;
+  align-items: end;
+  gap: 20px;
+  font-weight: bold;
 }
-.navbar > ul > li{
-    cursor: pointer;
+.navbar > ul > li {
+  cursor: pointer;
 }
 .navbar > ul > li:hover {
-    color: red;
+  color: red;
 }
-.opinion__container{
-    display: flex;
-  
+.opinion__container {
+  display: flex;
 }
-.opinion__container > a{
-    width: calc(100% / 3);
+.opinion__container > a {
+  width: calc(100% / 3);
+  display: block;
+}
+.opinion__container > a > img {
+  max-height: 300px;
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+.opinion__container > a > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  margin: 0px 10px;
+  padding: 6px;
+  color: white;
+  border-radius: 4px;
+}
+
+.new-product__list {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+.new-product__item {
+  width: calc((100% / 4) - 20px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  text-decoration: none;
+  color: black;
+}
+.new-product__item:hover {
+  color: red;
+}
+
+.footer {
+  background-color: black;
+  color: white;
+  padding: 20px;
+}
+.footer__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer__item {
+  width: calc(100% / 2);
+}
+.footer__item > ul {
+  margin-top: 10px;
+  display: flex;
+  gap: 4px;
+  flex-direction: column;
+}
+.footer__item--row > ul {
+  flex-direction: row;
+  gap: 10px;
+}
+.footer__item--row > ul > li > i {
+  font-size: 30px;
+  cursor: pointer;
+}
+.footer__item--row > ul > li:hover > i {
+  color: red;
+}
+.header__button {
+  display: none;
+}
+.sideBarMobile {
+  position: fixed;
+  top: 0;
+  right: 0;
+  border: 10p;
+  width: 231px;
+  border-radius: 10px;
+  padding: 10px;
+  height: 100vh;
+  background-color: white;
+  color: black;
+  z-index: 1000;
+  transform: translateX(100%);
+  transition: all 0.3s ease;
+}
+.sideBarMobile > ul > li {
+  padding: 10px;
+  font-weight: bold;
+}
+.sideBarMobile > .logo {
+  display: flex;
+  align-items: center;
+}
+.sideBarMobile > .logo > i {
+  font-size: 40px;
+}
+.active {
+  transform: translateX(5%);
+}
+.slider > img {
+  object-fit: cover;
+  max-width: 100%;
+}
+/* Tablet breakpoint */
+@media (max-width: 1024px) {
+  .gr {
+    max-width: 120px;
+    overflow: hidden;
+  }
+  .container {
+    max-width: 100%;
+    padding: 0 20px;
+  }
+  .header__button {
     display: block;
-}
-.opinion__container > a >img{
-    max-height: 300px;
-    width: 100%;
-    display: block;
+  }
+  .header__button > i {
+    font-size: 30px;
+  }
+  .logo > a > img {
+    width: 150px;
+  }
+  .navbar > ul {
+    display: none;
+  }
+  .slider > img {
     object-fit: cover;
-}
-.opinion__container > a >div{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: black;
-    margin: 0px 10px;
-    padding: 6px;
-    color: white;
-    border-radius: 4px;
-}
-
-.new-product__list{
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-    flex-wrap: wrap;
-}
-.new-product__item{
-    width: calc((100% / 4) - 20px );
-    display: flex;
+    max-height: 40vh;
+    max-width: 100%;
+  }
+  .navbar > ul {
     flex-direction: column;
     align-items: center;
+  }
+  .new-product__list {
     justify-content: center;
-    margin-bottom: 20px;
-    text-decoration: none;
-    color: black;
-}
-.new-product__item:hover{
-    color: red;
-}
-
-.footer{
-    background-color: black;
-    color: white;
-    padding: 20px;
-}
-.footer__container{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.footer__item{
-    width: calc(100% / 2);
-}
-.footer__item > ul{
-    margin-top: 10px;
-    display: flex;
-    gap: 4px;
+  }
+  .new-product__item {
+    width: calc((100% / 2) - 40px);
+    align-items: initial;
+  }
+  .opinion__container {
     flex-direction: column;
-}
-.footer__item--row >ul{
-    flex-direction: row;
     gap: 10px;
+  }
+  .opinion__container > a {
+    width: calc(100%);
+    display: block;
+  }
+  .footer__item {
+    width: 100%;
+  }
+  .footer__item--row > ul {
+    flex-direction: column;
+  }
 }
-.footer__item--row >ul >li >i{
-    font-size:30px;
-    cursor: pointer;
-}
-.footer__item--row >ul >li:hover >i{
-    color: red;
+
+/* Mobile breakpoint */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 10px;
+  }
 }
